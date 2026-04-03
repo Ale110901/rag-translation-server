@@ -83,11 +83,14 @@ python main.py
 ### Option B — Docker
 
 ```bash
-# Docker build:
-docker build --rm=true -t rag-translation  -f Dockerfile .
+# Docker (build + start):
+docker compose up --build -d
 
-# Docker run:
-docker run -p 127.0.0.1:8000:8000   --restart=always   --name rag-translation   -v volume:/data  rag-translation
+# the following times
+docker compose up -d
+
+# stop
+docker compose down
 ```
 
 ---
