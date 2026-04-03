@@ -1,8 +1,7 @@
-from http.client import HTTPException
 
-from fastapi import FastAPI, Depends
+from app.output_decorator import log_json
+from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 
 import logging
 
@@ -33,6 +32,7 @@ stammering_detector = StammeringDetector()
 
 #  POST /pairs  – store a new translation pair
 @app.post("/pairs", response_model=AddPairResponse, status_code=201)
+@log_json("POST /pairs")
 def add_pair(pair: TranslationPair):
     try:
         if not pair.source_language or not pair.target_language:
@@ -59,6 +59,7 @@ def add_pair(pair: TranslationPair):
 
 #  GET /prompt  – retrieve RAG translation prompt
 @app.get("/prompt", response_model=PromptResponse, status_code=201)
+@log_json("GET /prompt")
 def get_prompt(request: PromptRequest = Depends()):
     try:
         similar_pairs = db.search(source_language=request.source_language,
@@ -84,6 +85,7 @@ def get_prompt(request: PromptRequest = Depends()):
 
 #  GET /stammering  – detect translation stammering
 @app.get("/stammering", response_model=StammeringResponse, status_code=201)
+@log_json("GET /stammering")
 def detect_stammering(request: StammeringRequest = Depends()):
     """Detect stammering in a translated sentence."""
 
