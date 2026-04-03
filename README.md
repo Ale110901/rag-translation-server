@@ -59,28 +59,7 @@ A total score ≥ 1.0 is flagged as stammering.
 
 ## Quick Start
 
-### Option A — Local Python
-
-**Prerequisites:** Python 3.10+
-
-```bash
-# 1. Clone / unzip the project
-cd rag-translation-server
-
-# 2. Create a virtual environment (recommended)
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Start the server
-python main.py
-```
-
----
-
-### Option B — Docker
+### Docker
 
 ```bash
 # Docker (build + start):
