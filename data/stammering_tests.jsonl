@@ -1,0 +1,12 @@
+{"source_sentence": "Vorrei comprare un biglietto", "translated_sentence": "I would like to buy a ticket", "expected_output": false}
+{"source_sentence": "Amo la musica", "translated_sentence": "I love music", "expected_output": false}
+{"source_sentence": "Dove si trova la stazione?", "translated_sentence": "Where is the station station station station?", "expected_output": true}
+{"source_sentence": "Sono molto molto molto molto felice", "translated_sentence": "I am very happy", "expected_output": false}
+{"source_sentence": "Posso aiutarti?", "translated_sentence": "Can I help you??", "expected_output": false}
+{"source_sentence": "Sono affamato", "translated_sentence": "I'm hungry", "expected_output": false}
+{"source_sentence": "Sono così stanco", "translated_sentence": "I'm sooo tired", "expected_output": false}
+{"source_sentence": "ciao", "translated_sentence": "bye bye", "expected_output": false}
+{"source_sentence": "ciao ciao ciao ciao", "translated_sentence": "bye bye bye bye", "expected_output": false}
+{"source_sentence": "ciao ciao", "translated_sentence": "bye bye bye bye bye bye bye bye bye bye bye", "expected_output": true}
+{"source_sentence": "Questo è veramente l'ultimo test", "translated_sentence": "This is really the is really the is really the is really the last test", "expected_output": true}
+{"source_sentence": "Mi piace moooooooolto il cibo italiano", "translated_sentence": "I like Italian food soooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo", "expected_output": true}
